@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <style> @import url('https://css.gg/chevron-right-o.css');
+    
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Pixelade" rel="stylesheet">
+
+    <style>
+    .hiddeen {
+    display: none !important;}
+    @font-face {
+  font-family: 'Mergic';
+  src: url('fonts/Mergic.ttf.eot');
+  src: url('fonts/Mergic.ttf.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Mergic.ttf.woff') format('woff'),
+       url('fonts/Mergic.ttf.svg#Mergic') format('svg'),
+       url('fonts/Mergic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+  </style>
+  <style>
+  @font-face {
+  font-family: 'NovaFlat-Regular';
+  src: url('fonts/NovaFlat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+  </style>
+  <style>
+  @font-face {
+  font-family: 'DISCOVERY';
+  src: url('fonts/DISCOVERY.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.w{
+  margin-top: 32px;
+}
+.text-gradient {
+  background: linear-gradient(45deg, #11d1cb, #e714d2);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.bf{
+  
+}
+
+  </style>
+  <style>@import 'anim.css';</style>
+
+    
+ <link rel="icon" href="images/fav/favicon.ico" type="image/x-icon">
+    <title>Solana Goats</title>
+  
+</head>
+
+<body class="bg-[#381e6e] text-white font-NovaFlat-Regular" style="background-image: url('images/b1.jpg'); background-size: cover; background-position: center;">
+
+    <!--Navbar Start-->
+    <header class=" mx-auto md:h-[100vh] relative">
+
+        
+<nav class="bg-[#111] fixed top-0 left-0 right-0 z-50 p-6 border-b-2 border-[#fffff]">
+
+            <div class="flex items-center  justify-between flex-wrap ">
+                <!-- LOGO -->
+                <a href="" class="flex items-center flex-shrink-0 text-white mr-6">
+                    <img src="images/goat.png" class="w-10 h-10 rounded-full">
+                    <span class="ml-1 font-bold uppercase text-gradient">Solana goats</span>
+                </a>
+
+
+                <div class="block md:hidden">
+                    <button
+                        class=" toggle flex items-center px-3 py-2 border rounded hover:text-white hover:border-white">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    class="r hidden rounded mt-5 md:mt-0 w-full text-center bg-[#5901b1] md:bg-transparent md:flex md:w-[50%] md:items-center ">
+                    <a href="#home"
+                        class="block flex-grow p-3 md:p-0 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:hover:text-yellow-300">
+                        Home
+                    </a>
+                    <!-- <a href="#nft"
+                        class="block p-3 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 flex-grow md:hover:text-yellow-300">
+
+                    </a> -->
+                    <a href="#about"
+                    class="block p-3 w-full text-white md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 flex-grow md:hover:text-yellow-300">
+                    About
+                </a>
+                    <a href="#roadmap"
+                        class="block p-3 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 md:hover:text-yellow-300 flex-grow">
+                        Tokenomics
+                    </a>
+
+                    <a href="#rare"
+                        class="block p-3 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 md:hover:text-yellow-300 flex-grow">
+                        Goals
+                    </a>
+
+                    <a href="#hunt"
+                        class="block p-3 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 md:hover:text-yellow-300 flex-grow">
+                        Holders Arena
+                    </a>
+
+                    
+                </div>
+
+
+            </div>
+        </nav>
+
+        <!--Navbar End-->
+
+        <!--Home Section Start-->
+        <section class="mt-[100px] container p-6 mx-auto h-full max-h-full flex justify-center items-center text-justify text-4xl"
+            id="home">
+            <div class="flex flex-col-reverse md:flex-row flex-wrap items-center justify-between" data-aos="slide-down">
+                <div class=" p-[1em] md:p-[0] mt-[150px] md:mt-0 text-center md:text-start md:w-[50%]">
+
+                   
+                    <h1 class=" animate-bounce text-[30px] xl:text-[100px] text-yellow-200 mb-[40px] font-DISCOVERY text-gradient">Solana Goats</h1>
+                  
+
+                    <div class="text-[20px] xl:text-[30px]" id="content-container">
+                    <div id="content-1" class="mb-8"> <span class="font-bold text-[28px]">Goats of Solana –</span> is here to take over the world.<br>having its greatness and success in making solana great again </div>
+                    <!-- <div id="content-2" class="hiddeen mb-8"> <span class="font-bold text-[28px]">Join our team –</span> we're looking for talented developers, designers, and project leads to help build the future of ZKlands! Looking for a new adventure? Join the ZKlands community and connect with like-minded explorers! <br>Take the first step towards financial freedom – earn rewards and prizes while exploring the world of ZKlands!"
+                    </div>
+                    <div id="content-3" class="hiddeen mb-8"> <span class="font-bold text-[28px]">Secure, fast, and reliable –</span>  ZKlands NFTs are built on the ZKSync blockchain for maximum security and efficiency!Unleash your creativity – customize your NFTs with unique designs and unlock new possibilities in the game!<br>The future of NFTs is here – join the ZKlands revolution and be a part of the next big thing in the crypto world!"
+                    </div> -->
+                   <h4></h4>
+                     <h4 class="text-yellow-200 text-xs md:text-lg">
+                        <span class="asa hover:underline hover:ease-in "></span>
+                        <i class=" " id="copy" aria-hidden="true"></i>
+                    </h4>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="bg-[#5b11d1] hover:bg-[#5901b1] text-white mt-9 font-bold py-2 px-4 rounded-full">
+  View Whitepaper
+</a>
+               
+                    <!-- <p class="text-[15px]"><i class="fa fa-check p-2 ml-2 bg-yellow-400 rounded-full"
+                            aria-hidden="true"></i></p>    -->
+                </div>
+                </div>
+                <div class="relative m-4" data-aos="fade-in" data-aos-delay="100">
+                    <div
+                        class="bg-[#475ac4] animate-pulse blur-3xl w-[300px] h-[300px] lg:w-[400px] lg:h-[500px] rounded-full">
+                    </div>
+                    <img src="images/sloa.png"
+                        class="transform transition-transform duration-500 ease-in translate-x-4  z-10 absolute top-0 left-0 w-[400px] h-[400px] md:w-full md:h-full animate-pulse" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+<div class="border-t-2 border-[#5901b1] mt-[100px]"></div>
+
+<section class="bg-[#381e6e] mb-20 mb-40-lg">
+    
+<div class="container mx-auto py-24 px-6 md:px-0 text-center">
+  <h1 class="text-5xl font-mergic font-bold leading-tight mb-8 text-gradient">Get Access</h1>
+  <p class="text-2xl mb-8">For you to participate in this awesome journey you need <span class="font-bold text-[28px]">GOAT PASS </span> </p>
+   <p class="text-2xl mb-8">GOAT PASS is the key to the undiscovered world of Solana  </p>
+  <a href="#" class=" text-white px-6 py-3 rounded-full bg-[#5b11d1] hover:bg-[#5901b1] transition-colors duration-300 inline-block mb-20" target="_blank">Hire me</a>
+
+  
+  <a href="#" class="bg-[#5b11d1] hover:bg-[#5901b1] px-6 py-3 rounded-full transition-colors duration-300 inline-block mt-20" target="_blank">Register to get early access</a>
+</div>
+
+  <div class="container mx-auto" >
+       
+        <div class="flex justify-center">
+            <a href="http://www.x.com/goatofsolana" class="hover:animate-bounce" target="_blank">
+                <img class=" mr-5 rounded-full w-[50px] h-[50px] md:w-[100px] md:h-[100px]"
+                    src="images/twitter_logo.png">
+            </a>
+
+            <a href="#" class="hover:animate-bounce">
+                <img class="mr-5 rounded-full w-[50px] h-[50px] md:w-[100px] md:h-[100px]" src="images/discord.png">
+            </a>
+
+          
+            
+             <!-- <a href="" class="hover:animate-bounce">
+                <img class="rounded-full w-[50px] h-[50px] md:w-[100px] md:h-[100px]" src="images/telegram.png">
+            </a> -->
+        </div>
+    </div>
+    <div class="border-t-2 border-[#fff] mt-[100px]"></div>
+    </section>
+
+  
+    <div id="about"></div>
+
+<!-- <div class="border-t-2 border-[#fff]"> -->
+    <!-- Your content goes here -->
+  </div>
+
+  
+
+    <!--Home Section End-->
+
+    <!-- ABOUT  US -->
+    
+    <section class=" mb-4 container p-5 text-center mx-auto min-h-[400px]  md:mt-[150px]" id="about">
+        
+
+        <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-center md:mt-0 h-full">
+
+            <div class='w-full md:text-start md:w-[50%] mt-[30px] h-full text-xs'>
+
+                <h2 class=" text-[32px] md:text-4xl text-yellow-200 text-gradient" data-aos="slide-down font-bold">About Solana Goats!</h2>
+
+                <div class="md:p-0 text-[12px]">
+                    <div class="mt-20"> 
+                        <!-- <h3 class=" text-[15px] md:text-2xl my-4">Welcome to the world of a meme coin on Aleph zero!</h3> -->
+                       <h2 class=" text-[20px] md:text-2xl text-yellow-200" data-aos="slide-down"> Mission!</h2>
+    
+                        <p class=" font-bold">
+                            Welcome to the future of Solana, where the Goat 🐐 of Solana project is rewriting the rules and setting the stage for a groundbreaking journey into the promise land. We're not just a project; we're a movement, a force to be reckoned with in the Solana ecosystem.
+
+
+                        </p>
+                        <br>
+                        <h2 class=" text-[20px] md:text-2xl text-yellow-200" data-aos="slide-down"> Vission!</h2>
+    
+                        <p class="mt-4 font-bold">
+                         At the heart of our vision is the GOAT PASS, your exclusive key to the undiscovered world of Solana. No roadmap, no utilities – just a revolutionary journey that begins with securing your GOAT PASS. This pass grants you access to a realm where innovation meets community, and the Solana experience is redefined.
+                        </p>
+                         
+                        
+                        
+                        
+    </div>
+    <div id="who" class=""></div>
+
+
+
+                   
+                    <!-- <p class="text-[15px] md:text-xl mt-3 ">
+                        We're a group of 6 degen friends, scattered across multiple chain and bounded by our love for
+                        algorand.
+                        We hope to create a healthy community with you.
+                    </p> -->
+                </div>
+            </div>
+           
+           
+
+            <div class="relative h-full  md:w-[50%]">
+              
+                <img src="images/sola.png" class="-transform transition-transform duration-500 ease-in scale-110 w-[300px] h-[500px] transform animate-bounce-slow" alt="">
+                
+            </div>
+          
+        </div>
+    <!-- </section>
+ <div id="nft"></div>
+
+    <div class="border-t-2 border-[#fff] mt-[100px]">
+
+        <section id="about" class="py-12 bg-[#0b4530]">
+<div class="container mx-auto px-6 ">
+      <div class="text-center mb-8">
+        <h2 class=" font-bold leading-tight font-mergic text-[45px]">Treasures  of Zklands</h2>
+        <p class="text-lg text-yellow-200">Explore ZKlands and uncover valuable treasures along the way</p>
+      </div>
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">            
+    
+        <p class="mt-4">  
+        
+
+            Our NFTs represent pieces of land in ZKlands, each with their own rarity tier based on their location and geography. From the highly sought-after Summit's Peak to the tranquil Rolling Hills, there's a piece of ZKlands for everyone to enjoy. By owning an NFT that represents a piece of land in ZKlands, collectors have a unique and special opportunity to be a part of this magical world.
+        </p>
+        <div>
+          
+          <p class="text-lg mb-8">
+            Coming soon: the "Zklands Treasure Hunt" game! In this game, players will be able to explore the different locations in ZKlands, uncover valuable treasures, and compete with other players for rewards and prizes. With a focus on fun and engaging gameplay, the "Zklands Treasure Hunt" game is the perfect way to experience the world of ZKlands..</p>
+          
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+        
+        
+         
+          
+
+    <section class=" mt-[100px] container p-5 text-center mx-auto min-h-[400px]  md:mt-[150px] " style="background-image: url('images/mount.png'); background-size: cover; background-position: center; border-radius: 30px;">
+         <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-center md:mt-0 h-full"> 
+<div id="rare"></div>
+           
+                <div class="max-w-sm p-6 bg-[#071e22]">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight  text-yellow-200">Token Rewards for GOAT PASS Holders</h5>
+                    </a>
+                    
+                        for those who secure the coveted GOAT PASS, we have an extra special reward in store. Your support and participation will be acknowledged with tokens, a gesture of appreciation for being an integral part of our pioneering journey.. 
+                        <h3 class="mb-2 mt-2 text-2xl font-bold tracking-tight font-mergic">
+                
+               
+                    </a>
+                </div>
+                
+    </div>
+
+                   
+                </div>
+            </div>
+
+            <div class="relative h-full  md:w-[50%]">
+               
+            </div>
+        </div>
+       <div></div>
+ 
+    </section>
+
+     <section class="py-12 px-4 w-9/10 mx-auto  ">
+      <div class="bg-[#5901b1] rounded-lg p-6">
+        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-200">No Roadmap but Smashing Goals</h2>
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class=" shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-2">Social Media Buzz</h3>
+                    <p class="text-sm mt-4">Establish a compelling presence on various social media platforms.
+Create content that resonates and sparks excitement within the Solana community.
+Initiate conversations and engage with the audience to foster a sense of community.</p>
+                </div>
+                <div class=" shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-blue-400">Strategic Partnerships</h3>
+                    <p class="text-sm mt-4">Forge strategic partnerships with key players in the Solana ecosystem.
+Announce the collaboration with the Existence Solana project, signaling the beginning of an extraordinary journey.
+Leverage partnerships to enhance visibility and credibility within the community..</p>
+                </div>
+                <div class="shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-blue-300">Teaser Campaign</h3>
+                    <p class="text-sm mt-4">Teaser Campaignas they hold secrets and treasures that have yet to be uncovered.</p>
+                </div>
+                <div class="bg-[] shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-yellow-500">Goat PASS Launchs</h3>Unveil the Goat PASS, a limited edition ticket that grants exclusive access to an immersive Solana experience.
+Implement a seamless and user-friendly process for users to acquire their Goat PASS.
+Celebrate the launch with the community, emphasizing the unique opportunities it presents.</p>
+                </div>
+                
+        <div class="mt-12  shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-4">Token Launch Preparations</h3>
+            <p class="text-sm">Build anticipation for the $GOAT token launch through informative and engaging content.
+Outline the utility and benefits of the $GOAT token within the Solana ecosystem.
+Prepare the community for the upcoming token launch with strategic communications.</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+    
+       <!-- component -->
+<div class="container mx-auto text-center p-5 md-p-0  py-12 px-4 w-9/10 " id="roadmap">
+
+            <!-- <h1 class="text-[60px] xl:text-[100px] text-yellow-200 mb-[40px]">Witty dogs gen 1 nfts</h1> -->
+             <h2 class="text-center text-[20px] md:text-4xl my-20 text-yellow-200 font-bold text-[32px] text-gradient">$GOAT TOKENOMICS</h2>
+
+            
+        </div>
+        <i class="gg-chevron-right-o bg-[#22a39f]"></i>
+
+          <div
+            class="flex overflow-x-scroll pb-10 hide-scroll-bar"
+          >
+            <div
+              class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
+            >
+              
+            
+            
+            <div class=" bg-[#5901b1] shadow-xl w-[350px] h-[350px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
+                <div class="flex flex-col justify-center items-center p-4 h-full">
+                    <!-- <h1 class="font-mergic font-bold text-[24px]">2nd Quater 2023</h1> -->
+                    <h3 class="font-bold text-yellow-200">Total Supply: 690billion (100%)</h3>
+                     <p class="text-white font-bold text-[12px] mt-2">Community Airdrop: 10%</p>
+                    <p class="text-[12px] font-bold mt-2">NFT Holders: 25%</p>
+                     <p class="text-[12px] font-bold mt-2">LP: 45%</p>
+                      <p class="text-[12px] mt-2 font-bold">Teams: 10%</p>
+                      <p class="text-[12px] font-bold mt-2">Treasury: 5%</p>
+                      <p class="text-[12px] mt-2 font-bold">Marketing: 5%</p>
+                       
+                </div>
+            </div>
+
+             <!-- <div class=" bg-[#071e22] shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
+                <div class="flex flex-col justify-center items-center p-4 h-full">
+                    <h1 class="font-mergic font-bold text-[24px]">End of 2nd Quater 2023</h1>
+                    <h3 class="text-bold text-yellow-200 font-bold">Expansion and Customization  </h3>
+
+                    <p class="text-[12px] font-bold mt-2">Onboard Investors</p>
+                     
+                    <p class="text-[12px] font-bold mt-2">Expand the ZKlands world by adding new locations and features</p>
+                     <p class="text-[12px] font-bold mt-2">Allow collectors to customize their NFTs with unique designs and personal touches.</p>
+                      <p class="text-[12px] font-bold mt-2">Host events and competitions for collectors to showcase their NFTs and win prizes.</p>
+                       
+                </div>
+            </div>
+
+             <div class=" bg-[#071e22] font-bold  shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
+                <div class="flex flex-col justify-center items-center p-4 h-full">
+                    <h1 class="font-mergic font-bold text-[24px]">4th Quater 2023</h1>
+                    <h4 class="text-bold text-yellow-200">Treasure Hunt Game Release  </h4>
+                     
+                    <p class="text-[12px] mt-2">Release the "Zklands Treasure Hunt" game, allowing players to explore the different locations in ZKlands and uncover valuable treasures.</p>
+                     <p class="text-[12px] mt-2">Offer incentives for players to participate in the game, such as tokens, in-game items, and real-world prizes.</p>
+                      <p class="text-[12px] mt-2">Hold regular tournaments and competitions with even bigger prizes on offer.</p>
+                       <p class="text-[12px] mt-2">Hire more developers and designers to support the growth of the game and community</p>
+                </div>
+            </div>
+
+             <div class=" bg-[#071e22] font-bold  shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
+                <div class="flex flex-col justify-center items-center p-4 h-full">
+                    <h1 class="font-mergic font-bold text-[24px]">2024 and Beyond</h1>
+                    <h3 class="text-bold text-yellow-200">Community Growth and Expansion  </h3>
+                     <h3 class="text-bold text-white">Continue to build and engage with the ZKlands community.</h3>
+                    <p class="text-[12px] mt-2">Host meetups, webinars, and other events to connect with like-minded individuals and share insights and experiences.</p>
+                     <p class="text-[12px] mt-2">Expand the ZKlands ecosystem by partnering with other projects and platforms in the NFT and blockchain space.</p>
+                      <p class="text-[12px] mt-2">Explore opportunities to use ZKlands NFTs for other use cases.</p>
+                       
+                </div> -->
+                <div id="hunt"></div>
+            </div>
+              
+              
+              
+              
+             
+
+          </div>
+    </div>
+    <style>
+    .hide-scroll-bar {
+      -ms-overflow-style: none;
+      scrollbar-width : none;
+    }
+    .hide-scroll-bar::-webkit-scrollbar {
+      display: none;
+    }
+    </style>
+
+
+  
+
+  <!-- Treasure Hunt Section
+  <div class="border-t-2 border-[#fff]"></div>
+  <section id="treasure-hunt" class="py-12 bg-[#0b4530]">
+    
+    <div class="container mx-auto px-6 ">
+      <div class="text-center mb-8">
+        <h2 class="text-[45px] font-bold font-mergic leading-tight">Treasure Hunt Game- </h2> <h4>comming soon</h4>
+        <p class="text-lg text-yellow-200">Explore ZKlands and uncover valuable treasures along the way</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6 ">
+          <h3 class="text-[32px] font-bold leading-tight font-mergic mb-4">In-Game Rewards</h3>
+          <p class="text-lg mb-4">Complete objectives and uncover valuable treasures to earn in-game rewards such as tokens and other items.</p>
+        </div>
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
+          <h3 class="text-[32px] font-bold font-mergic leading-tight mb-4">Real-World Prizes</h3>
+          <p class="text-lg mb-4">Achieve certain milestones and uncover the most valuable treasures to win real-world prizes such as gift cards, merchandise, or even cryptocurrency.</p>
+        </div>
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
+          <h3 class="text-[32px] font-bold font-mergic leading-tight mb-4">NFT Staking</h3>
+          <p class="text-lg mb-4">Stake your NFTs representing pieces of land in Zklands to earn additional rewards or bonuses in the game. This incentivizes players to hold onto their NFTs and potentially increase the value of the tokens.</p>
+          <div id="team"></div>
+</div>
+</div>
+<div class="text-center mt-8">
+<a href="#" class="bg-yellow-800 text-white py-2 px-4 rounded-full hover:bg-yellow-500">Join the Hunt</a>
+</div>
+</div>
+
+</section> -->
+
+  <!-- Team Section 
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-[45px] font-bold leading-tight font-mergic">Meet Our Team</h2>
+        <p class="text-lg">Our core team is made up of experienced developers, designers, and project leads who are passionate about gaming and blockchain technology.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
+          <img src="https://via.placeholder.com/500x500" alt="Developer" class="rounded-full mb-4">
+          <h3 class="text-2xl font-bold leading-tight mb-2">John Doe</h3>
+          <p class="text-lg mb-2">Lead Developer</p>
+          <p class="text-lg">John has over 10 years of experience in software development and is an expert in blockchain technology. He is responsible for the development of the ZKlands game and ensuring its security and scalability.</p>
+        </div>
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
+          <img src="https://via.placeholder.com/500x500" alt="Designer" class="rounded-full mb-4">
+          <h3 class="text-2xl font-bold leading-tight mb-2">Jane Smith</h3>
+          <p class="text-lg mb-2">Lead Designer</p>
+          <p class="text-lg">Jane is a talented graphic designer with over 5 years of experience in the gaming industry. She is responsible for the design of the ZKlands game and ensuring its visual appeal and user experience.</p>
+        </div>
+        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
+          <img src="https://via.placeholder.com/500x500" alt="Project Lead" class="rounded-full mb-4">
+          <h3 class="text-2xl font-bold leading-tight mb-2">Alex Johnson</h3>
+          <p class="text-lg mb-2">Project Lead</p>
+          <p class="text-lg">Alex is a seasoned project manager with over 8 years of experience in the gaming industry. He is responsible for overseeing the development and launch of the ZKlands game, as well as ensuring its success and growth in the market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  Contact Section -->
+
+  <div class="container mx-auto text-center mt-[100px]">
+        <a href="mailto:info@solanagoat.xyz">
+            <span
+                class="p-4 mb-8 inline-block w-[300px]  bg-[#5901b1] hover:bg-[#5b11d1] rounded-xl mx-auto uppercase">mail
+                us</span>
+        </a>
+
+    </div>
+  
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 flex justify-between">
+      <p>&copy; 2023 Solana Goats. All rights reserved.</p>
+      <ul class="flex">
+        <li class="mr-6"><a href="#" class="hover:text-gray-400"></a></li>
+        <li><a href="#" class="hover:text-gray-400"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+    <script>
+       const menu = document.querySelector(".r");
+        const btn = document.querySelector(".toggle");
+
+
+        const show = false;
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        })
+
+        document.addEventListener('scroll', () => {
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden')
+            }
+        })
+
+        
+       
+
+        document.querySelector("#copy").addEventListener("click", () => {
+            const copy = navigator.clipboard.writeText(document.querySelector(".asa").innerHTML);
+
+            document.querySelector('#copy').classList.remove('fa-copy');
+            document.querySelector('#copy').classList.add('fa-check');
+        })
+
+
+
+    // const content1 = document.getElementById('content-1');
+    // const content2 = document.getElementById('content-2');
+    // const content3 = document.getElementById('content-3');
+
+    // const contentArray = [content1, content2, content3];
+    // let currentIndex = 0;
+
+    // function rotateContent() {
+    //   contentArray[currentIndex].classList.add('hiddeen');
+    //   currentIndex = (currentIndex + 1) % contentArray.length;
+    //   contentArray[currentIndex].classList.remove('hiddeen');
+    // }
+
+    // setInterval(rotateContent, 11000);
+</script>
+
+  
+</body>
+
+</html>
