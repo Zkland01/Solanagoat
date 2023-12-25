@@ -20,6 +20,63 @@
     <style>
     .hiddeen {
     display: none !important;}
+     /* Updated styles for the buttons */
+     .voyage-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .voyage-button {
+            background-color: #5b11d1;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 2xl;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .voyage-button:hover {
+            background-color: #5901b1;
+        }
+         /* Style for the modal */
+         .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            color: black;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Style for the close button in the modal */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Card-like styling for the modal content */
+        #modalContent {
+            border: 2px solid #5901b1;
+            padding: 20px;
+            border-radius: 8px;
+        }
     @font-face {
   font-family: 'Mergic';
   src: url('fonts/Mergic.ttf.eot');
@@ -200,6 +257,24 @@
                             aria-hidden="true"></i></p>    -->
                 </div>
                 </div>
+                        <!-- Buttons for Voyages -->
+                    
+        <!-- Buttons for Voyages -->
+        <div class="voyage-buttons">
+            <button class="voyage-button" id="voyageA" onclick="openModal('Voyage A')">Voyage A</button>
+            <button class="voyage-button" id="voyageB" onclick="openModal('Voyage B')">Voyage B</button>
+            <button class="voyage-button" id="voyageC" onclick="openModal('Voyage C')">Voyage C</button>
+            <button class="voyage-button" id="voyageD" onclick="openModal('Voyage D')">Voyage D</button>
+            <button class="voyage-button" id="voyageE" onclick="openModal('Voyage E')">Voyage E</button>
+            <button class="voyage-button" id="voyageF" onclick="openModal('Voyage F')">Voyage F</button>
+            <button class="voyage-button" id="voyageG" onclick="openModal('Voyage G')">Voyage G</button>
+        </div>
+                        <div id="voyageModal" class="modal">
+                            <span class="close-btn" onclick="closeModal()">&times;</span>
+                            <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+                            <p id="modalInfo" class="text-lg"></p>
+                        </div>
+                    
                 <div class="relative m-4" data-aos="fade-in" data-aos-delay="100">
                     <div
                         class="bg-[#475ac4] animate-pulse blur-3xl w-[300px] h-[300px] lg:w-[400px] lg:h-[500px] rounded-full">
@@ -283,8 +358,8 @@
       </ul>
     </div>
   </footer>
-
-    <script>
+ 
+    <script defer>
        const menu = document.querySelector(".r");
         const btn = document.querySelector(".toggle");
 
@@ -325,6 +400,10 @@
     // }
 
     // setInterval(rotateContent, 11000);
+  
+
+        // Function to close the modal
+    
     const playButton = document.getElementById('playButton');
         const videoPlayer = document.getElementById('videoPlayer');
         const closeButton = document.getElementById('closeButton');
@@ -357,6 +436,52 @@ playButton.style.display='block';
             // Hide the close button
             closeButton.style.display = 'none';
         });
+
+ 
+</script>
+<script>
+    // Function to open the modal with voyage information
+    function openModal(voyage) {
+        const modal = document.getElementById('voyageModal');
+        const titleElement = document.getElementById('modalTitle');
+        const infoElement = document.getElementById('modalInfo');
+
+        const voyageData = getVoyageData(voyage);
+
+        if (titleElement && infoElement && voyageData) {
+            // Set the title and information based on the selected voyage
+            titleElement.innerText = voyageData.title;
+            infoElement.innerText = voyageData.info;
+
+            modal.style.display = 'block';
+        } else {
+            console.error('Title, info element, or voyage data not found.');
+        }
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        const modal = document.getElementById('voyageModal');
+        modal.style.display = 'none';
+    }
+
+    // Function to get voyage data based on the selected voyage
+    function getVoyageData(voyage) {
+        switch (voyage) {
+            case 'Voyage A':
+                return { title: 'Voyage A', info: "In The beginning 1. Luffy's team of 500 2. Set sail" };
+            case 'Voyage B':
+                return { title: 'Voyage B', info: "B. We set sail 1. 200 Luffy holders 2. 200k mcap Reward:Airdrop to top holders who never sold or betrayed luffy" };
+            // Add cases for other voyages
+            case 'Voyage C':
+                return {title:'Voyage C' , info :'C. Weathering the storm1. 700 Luffy holders2. 500k mcap3. X raidRewards Random community Airdrop'}
+          
+            case 'Voyage D':
+                return {title:'Voyage C' , info :"D. Treasure hunting 1. 1k+ holders2. 1m mcapReward.Luffy new year's present"}
+            default:
+                return null;
+        }
+    }
 </script>
 
   
