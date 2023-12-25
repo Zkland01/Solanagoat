@@ -25,6 +25,17 @@
   --tw-content: '';
 }
 
+/* #videoPlayer {
+  width: 100vw;
+  height: 100vh;
+}
+
+#playButton {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 999;
+} */
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -527,6 +538,8 @@ video {
   .container {
     max-width: 768px;
   }
+      #playButton{left: 83%;}
+
 }
 
 @media (min-width: 1024px) {

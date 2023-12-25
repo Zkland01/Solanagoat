@@ -32,6 +32,26 @@
 
 
 }
+#playButton{
+    left: 93%; 
+    top: 82%;
+} 
+#closeButton{
+    position: absolute ; bottom: 70%; left: 93%; width: 60px;
+}
+@media  (max-width: 768px) {
+   
+    #playButton{
+        left: 83%;
+        top: 85%;
+    }
+    #closeButton{
+    bottom: 93%;
+    left: 85%;
+   
+    }
+}
+
   </style>
   <style>
   @font-face {
@@ -81,7 +101,7 @@
                 <!-- LOGO -->
                 <a href="" class="flex items-center flex-shrink-0 text-white mr-6">
                     <img src="images/goat.png" class="w-10 h-10 rounded-full">
-                    <span class="ml-1 font-bold uppercase text-gradient">Solana goats</span>
+                    <span class="ml-1 font-bold uppercase text-gradient">Luffy De monkey</span>
                 </a>
 
 
@@ -123,7 +143,8 @@
                         class="block p-3 w-full text-black md:text-white mt-4 md:mt-0 md:inline-block md:mr-4 md:p-0 md:hover:text-yellow-300 flex-grow">
                         Holders Arena
                     </a>
-
+                 
+                      
                     
                 </div>
 
@@ -132,7 +153,22 @@
         </nav>
 
         <!--Navbar End-->
-
+        <button id="playButton" class="fixed bottom-4 right-4 p-4 bg-blue-500 text-white rounded-full" style="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-10">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9L5 21V3z"/>
+            </svg>
+        </button>
+        
+    <video id="videoPlayer" class="w-full hidden h-full" controls>
+        <!-- Add your video source here -->
+        <source src="./ufot.godspower_ae4c945c1ba94fe8a94b4f452fe39016.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="closeButton" class=" hidden absolute left-52 bottom-52 w-70 p-4 bg-red-500 text-white rounded-full" style="">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-40">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>  
         <!--Home Section Start-->
         <section class="mt-[100px] container p-6 mx-auto h-full max-h-full flex justify-center items-center text-justify text-4xl"
             id="home">
@@ -140,11 +176,12 @@
                 <div class=" p-[1em] md:p-[0] mt-[150px] md:mt-0 text-center md:text-start md:w-[50%]">
 
                    
-                    <h1 class=" animate-bounce text-[30px] xl:text-[100px] text-yellow-200 mb-[40px] font-DISCOVERY text-gradient">Solana Goats</h1>
+                    <h1 class=" animate-bounce text-[30px] xl:text-[100px] text-yellow-200 mb-[40px] font-DISCOVERY text-gradient">Luffy De Monkey</h1>
                   
 
                     <div class="text-[20px] xl:text-[30px]" id="content-container">
-                    <div id="content-1" class="mb-8"> <span class="font-bold text-[28px]">Goats of Solana –</span> is here to take over the world.<br>having its greatness and success in making solana great again </div>
+                    <div id="content-1" class="mb-8"> <span class="font-bold text-[28px]">Buckle up, nakama!  –</span> Join Luffy de Monkey.<br>the Solana meme coin with the pump-pump punch! Channel your inner pirate and stretch your portfolio beyond 
+                      imagination. Powered by the legendary Green Pump-Pump Fruit, this ain't your average crypto cruise. Witness explosive gains, rubbery resilience, and a community as loyal as Luffy's own crew. So set sail for adventure, invest like a Straw Hat, and let's make the crypto seas our treasure ground! </div>
                     <!-- <div id="content-2" class="hiddeen mb-8"> <span class="font-bold text-[28px]">Join our team –</span> we're looking for talented developers, designers, and project leads to help build the future of ZKlands! Looking for a new adventure? Join the ZKlands community and connect with like-minded explorers! <br>Take the first step towards financial freedom – earn rewards and prizes while exploring the world of ZKlands!"
                     </div>
                     <div id="content-3" class="hiddeen mb-8"> <span class="font-bold text-[28px]">Secure, fast, and reliable –</span>  ZKlands NFTs are built on the ZKSync blockchain for maximum security and efficiency!Unleash your creativity – customize your NFTs with unique designs and unlock new possibilities in the game!<br>The future of NFTs is here – join the ZKlands revolution and be a part of the next big thing in the crypto world!"
@@ -155,7 +192,7 @@
                         <i class=" " id="copy" aria-hidden="true"></i>
                     </h4>
                     <a href="#" target="_blank" rel="noopener noreferrer" class="bg-[#5b11d1] hover:bg-[#5901b1] text-white mt-9 font-bold py-2 px-4 rounded-full">
-                      Buy $GOAT token 
+                      Buy $Luffy here 
                                             
                       </a>
                                     
@@ -209,9 +246,8 @@
     <div class="border-t-2 border-[#fff] mt-[100px]"></div>
     </section>
 
-  
-    <div id="about"></div>
 
+    <div id="about"></div>
 <!-- <div class="border-t-2 border-[#fff]"> -->
     <!-- Your content goes here -->
   </div>
@@ -222,297 +258,7 @@
 
     <!-- ABOUT  US -->
     
-    <section class=" mb-4 container p-5 text-center mx-auto min-h-[400px]  md:mt-[150px]" id="about">
-        
-
-        <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-center md:mt-0 h-full">
-
-            <div class='w-full md:text-start md:w-[50%] mt-[30px] h-full text-xs'>
-
-                <h2 class=" text-[32px] md:text-4xl text-yellow-200 text-gradient" data-aos="slide-down font-bold">About Solana Goats!</h2>
-
-                <div class="md:p-0 text-[12px]">
-                    <div class="mt-20"> 
-                        <!-- <h3 class=" text-[15px] md:text-2xl my-4">Welcome to the world of a meme coin on Aleph zero!</h3> -->
-                       <h2 class=" text-[20px] md:text-2xl text-yellow-200" data-aos="slide-down"> Mission!</h2>
-    
-                        <p class=" font-bold">
-                            Welcome to the future of Solana, where the Goat 🐐 of Solana project is rewriting the rules and setting the stage for a groundbreaking journey into the promise land. We're not just a project; we're a movement, a force to be reckoned with in the Solana ecosystem.
-
-
-                        </p>
-                        <br>
-                        <h2 class=" text-[20px] md:text-2xl text-yellow-200" data-aos="slide-down"> Vission!</h2>
-    
-                        <p class="mt-4 font-bold">
-                          Our vision for $GOAT is to cultivate a robust and inclusive environment within the Solana ecosystem.
-                        </p>
-                         
-                        
-                        
-                        
-    </div>
-    <div id="who" class=""></div>
-
-
-
-                   
-                    <!-- <p class="text-[15px] md:text-xl mt-3 ">
-                        We're a group of 6 degen friends, scattered across multiple chain and bounded by our love for
-                        algorand.
-                        We hope to create a healthy community with you.
-                    </p> -->
-                </div>
-            </div>
-           
-           
-
-            <div class="relative h-full  md:w-[50%]">
-              
-                <img src="images/sola.png" class="-transform transition-transform duration-500 ease-in scale-110 w-[300px] h-[500px] transform animate-bounce-slow" alt="">
-                
-            </div>
-          
-        </div>
-    <!-- </section>
- <div id="nft"></div>
-
-    <div class="border-t-2 border-[#fff] mt-[100px]">
-
-        <section id="about" class="py-12 bg-[#0b4530]">
-<div class="container mx-auto px-6 ">
-      <div class="text-center mb-8">
-        <h2 class=" font-bold leading-tight font-mergic text-[45px]">Treasures  of Zklands</h2>
-        <p class="text-lg text-yellow-200">Explore ZKlands and uncover valuable treasures along the way</p>
-      </div>
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">            
-    
-        <p class="mt-4">  
-        
-
-            Our NFTs represent pieces of land in ZKlands, each with their own rarity tier based on their location and geography. From the highly sought-after Summit's Peak to the tranquil Rolling Hills, there's a piece of ZKlands for everyone to enjoy. By owning an NFT that represents a piece of land in ZKlands, collectors have a unique and special opportunity to be a part of this magical world.
-        </p>
-        <div>
-          
-          <p class="text-lg mb-8">
-            Coming soon: the "Zklands Treasure Hunt" game! In this game, players will be able to explore the different locations in ZKlands, uncover valuable treasures, and compete with other players for rewards and prizes. With a focus on fun and engaging gameplay, the "Zklands Treasure Hunt" game is the perfect way to experience the world of ZKlands..</p>
-          
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-        
-        
-         
-          
-
-  <section class="mt-[100px] container p-5 text-center mx-auto min-h-[400px] md:mt-[150px] relative" style="border-radius: 30px;">
-    <video autoplay loop muted playsinline class="w-full h-full object-cover absolute inset-0 border-radius-30">
-        <source src="images/vide.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-center md:mt-0 h-full">
-        <div id="rare"></div>
-    </div>
-
-    <div class="relative h-full md:w-[50%]">
-        <!-- Your content goes here -->
-    </div>
-</section>
-
-     <section class="py-12 px-4 w-9/10 mx-auto  ">
-      <div class="bg-[#5901b1] rounded-lg p-6">
-        <h2 class="text-3xl font-bold text-center mb-8 text-yellow-200">No Roadmap but Smashing Goals</h2>
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class=" shadow-lg rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-2">Social Media Buzz</h3>
-                    <p class="text-sm mt-4">Establish a compelling presence on various social media platforms.
-Create content that resonates and sparks excitement within the Solana community.
-Initiate conversations and engage with the audience to foster a sense of community.</p>
-                </div>
-                <div class=" shadow-lg rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-blue-400">Strategic Partnerships</h3>
-                    <p class="text-sm mt-4">Forming a herd we graze and grow the Solana Goats Community together</p>
-                </div>
-                <div class="shadow-lg rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-blue-300">Teaser Campaign</h3>
-                    <p class="text-sm mt-4">Teaser Campaigns that hold uncovered secrets and treasures</p>
-                </div>
-                <!-- <div class="bg-[] shadow-lg rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-yellow-500">Goat PASS Launchs</h3>Unveil the Goat PASS, a limited edition ticket that grants exclusive access to an immersive Solana experience.
-Implement a seamless and user-friendly process for users to acquire their Goat PASS.
-Celebrate the launch with the community, emphasizing the unique opportunities it presents.</p>
-                </div> -->
-                
-       
-       <!-- <div class="mt-12  shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold mb-4">Token Launch Preparations</h3>
-            <p class="text-sm">Build anticipation for the $GOAT token launch through informative and engaging content.
-Outline the utility and benefits of the $GOAT token within the Solana ecosystem.
-Prepare the community for the upcoming token launch with strategic communications.</p>
-        </div> -->
-    </div>
-    </div>
-</section>
-
-
-
-    
-       <!-- component -->
-<div class="container mx-auto text-center p-5 md-p-0  py-12 px-4 w-9/10 " id="roadmap">
-
-            <!-- <h1 class="text-[60px] xl:text-[100px] text-yellow-200 mb-[40px]">Witty dogs gen 1 nfts</h1> -->
-             <h2 class="text-center text-[20px] md:text-4xl my-20 text-yellow-200 font-bold text-[32px] text-gradient">$GOAT TOKENOMICS</h2>
-
-            
-        </div>
-        <i class="gg-chevron-right-o bg-[#22a39f]"></i>
-
-          <div
-            class="flex overflow-x-scroll pb-10 hide-scroll-bar"
-          >
-            <div
-              class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
-            >
-              
-            
-            
-            <div class=" bg-[#5901b1] shadow-xl w-[350px] h-[350px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
-                <div class="flex flex-col justify-center items-center p-4 h-full">
-                    <!-- <h1 class="font-mergic font-bold text-[24px]">2nd Quater 2023</h1> -->
-                    <h3 class="font-bold text-yellow-200">Total Supply: 690billion (100%)</h3>
-                     <p class="text-[12px] font-bold mt-2">LP: 75%</p>
-                      <p class="text-[12px] mt-2 font-bold">Teams: 13%</p>
-                      <p class="text-[12px] font-bold mt-2">Treasury: 5%</p>
-                      <p class="text-[12px] mt-2 font-bold">Cex Listing: 7%</p>
-                       
-                </div>
-            </div>
-
-             <!-- <div class=" bg-[#071e22] shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
-                <div class="flex flex-col justify-center items-center p-4 h-full">
-                    <h1 class="font-mergic font-bold text-[24px]">End of 2nd Quater 2023</h1>
-                    <h3 class="text-bold text-yellow-200 font-bold">Expansion and Customization  </h3>
-
-                    <p class="text-[12px] font-bold mt-2">Onboard Investors</p>
-                     
-                    <p class="text-[12px] font-bold mt-2">Expand the ZKlands world by adding new locations and features</p>
-                     <p class="text-[12px] font-bold mt-2">Allow collectors to customize their NFTs with unique designs and personal touches.</p>
-                      <p class="text-[12px] font-bold mt-2">Host events and competitions for collectors to showcase their NFTs and win prizes.</p>
-                       
-                </div>
-            </div>
-
-             <div class=" bg-[#071e22] font-bold  shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
-                <div class="flex flex-col justify-center items-center p-4 h-full">
-                    <h1 class="font-mergic font-bold text-[24px]">4th Quater 2023</h1>
-                    <h4 class="text-bold text-yellow-200">Treasure Hunt Game Release  </h4>
-                     
-                    <p class="text-[12px] mt-2">Release the "Zklands Treasure Hunt" game, allowing players to explore the different locations in ZKlands and uncover valuable treasures.</p>
-                     <p class="text-[12px] mt-2">Offer incentives for players to participate in the game, such as tokens, in-game items, and real-world prizes.</p>
-                      <p class="text-[12px] mt-2">Hold regular tournaments and competitions with even bigger prizes on offer.</p>
-                       <p class="text-[12px] mt-2">Hire more developers and designers to support the growth of the game and community</p>
-                </div>
-            </div>
-
-             <div class=" bg-[#071e22] font-bold  shadow-xl w-[300px] h-[300px] rounded-2xl m-4 md:mx-20  border-[#fff] transform hover:scale-110 transition duration-500 ease-in-out">
-                <div class="flex flex-col justify-center items-center p-4 h-full">
-                    <h1 class="font-mergic font-bold text-[24px]">2024 and Beyond</h1>
-                    <h3 class="text-bold text-yellow-200">Community Growth and Expansion  </h3>
-                     <h3 class="text-bold text-white">Continue to build and engage with the ZKlands community.</h3>
-                    <p class="text-[12px] mt-2">Host meetups, webinars, and other events to connect with like-minded individuals and share insights and experiences.</p>
-                     <p class="text-[12px] mt-2">Expand the ZKlands ecosystem by partnering with other projects and platforms in the NFT and blockchain space.</p>
-                      <p class="text-[12px] mt-2">Explore opportunities to use ZKlands NFTs for other use cases.</p>
-                       
-                </div> -->
-                <div id="hunt"></div>
-            </div>
-              
-              
-              
-              
-             
-
-          </div>
-    </div>
-    <style>
-    .hide-scroll-bar {
-      -ms-overflow-style: none;
-      scrollbar-width : none;
-    }
-    .hide-scroll-bar::-webkit-scrollbar {
-      display: none;
-    }
-    </style>
-
-
-  
-
-  <!-- Treasure Hunt Section
-  <div class="border-t-2 border-[#fff]"></div>
-  <section id="treasure-hunt" class="py-12 bg-[#0b4530]">
-    
-    <div class="container mx-auto px-6 ">
-      <div class="text-center mb-8">
-        <h2 class="text-[45px] font-bold font-mergic leading-tight">Treasure Hunt Game- </h2> <h4>comming soon</h4>
-        <p class="text-lg text-yellow-200">Explore ZKlands and uncover valuable treasures along the way</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6 ">
-          <h3 class="text-[32px] font-bold leading-tight font-mergic mb-4">In-Game Rewards</h3>
-          <p class="text-lg mb-4">Complete objectives and uncover valuable treasures to earn in-game rewards such as tokens and other items.</p>
-        </div>
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
-          <h3 class="text-[32px] font-bold font-mergic leading-tight mb-4">Real-World Prizes</h3>
-          <p class="text-lg mb-4">Achieve certain milestones and uncover the most valuable treasures to win real-world prizes such as gift cards, merchandise, or even cryptocurrency.</p>
-        </div>
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
-          <h3 class="text-[32px] font-bold font-mergic leading-tight mb-4">NFT Staking</h3>
-          <p class="text-lg mb-4">Stake your NFTs representing pieces of land in Zklands to earn additional rewards or bonuses in the game. This incentivizes players to hold onto their NFTs and potentially increase the value of the tokens.</p>
-          <div id="team"></div>
-</div>
-</div>
-<div class="text-center mt-8">
-<a href="#" class="bg-yellow-800 text-white py-2 px-4 rounded-full hover:bg-yellow-500">Join the Hunt</a>
-</div>
-</div>
-
-</section> -->
-
-  <!-- Team Section 
-  <section class="py-12">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-8">
-        <h2 class="text-[45px] font-bold leading-tight font-mergic">Meet Our Team</h2>
-        <p class="text-lg">Our core team is made up of experienced developers, designers, and project leads who are passionate about gaming and blockchain technology.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
-          <img src="https://via.placeholder.com/500x500" alt="Developer" class="rounded-full mb-4">
-          <h3 class="text-2xl font-bold leading-tight mb-2">John Doe</h3>
-          <p class="text-lg mb-2">Lead Developer</p>
-          <p class="text-lg">John has over 10 years of experience in software development and is an expert in blockchain technology. He is responsible for the development of the ZKlands game and ensuring its security and scalability.</p>
-        </div>
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
-          <img src="https://via.placeholder.com/500x500" alt="Designer" class="rounded-full mb-4">
-          <h3 class="text-2xl font-bold leading-tight mb-2">Jane Smith</h3>
-          <p class="text-lg mb-2">Lead Designer</p>
-          <p class="text-lg">Jane is a talented graphic designer with over 5 years of experience in the gaming industry. She is responsible for the design of the ZKlands game and ensuring its visual appeal and user experience.</p>
-        </div>
-        <div class="bg-[#071e22] rounded-lg shadow-lg p-6">
-          <img src="https://via.placeholder.com/500x500" alt="Project Lead" class="rounded-full mb-4">
-          <h3 class="text-2xl font-bold leading-tight mb-2">Alex Johnson</h3>
-          <p class="text-lg mb-2">Project Lead</p>
-          <p class="text-lg">Alex is a seasoned project manager with over 8 years of experience in the gaming industry. He is responsible for overseeing the development and launch of the ZKlands game, as well as ensuring its success and growth in the market.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  Contact Section -->
+    <!--  -->
 
   <div class="container mx-auto text-center mt-[100px]">
         <a href="mailto:info@solanagoat.xyz">
@@ -522,6 +268,10 @@ Prepare the community for the upcoming token launch with strategic communication
         </a>
 
     </div>
+    
+     
+
+        <!-- Video Modal -->
   
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-8">
@@ -550,8 +300,6 @@ Prepare the community for the upcoming token launch with strategic communication
                 menu.classList.add('hidden')
             }
         })
-
-        
        
 
         document.querySelector("#copy").addEventListener("click", () => {
@@ -577,6 +325,38 @@ Prepare the community for the upcoming token launch with strategic communication
     // }
 
     // setInterval(rotateContent, 11000);
+    const playButton = document.getElementById('playButton');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const closeButton = document.getElementById('closeButton');
+
+        playButton.addEventListener('click', () => {
+            // Request fullscreen
+           
+
+            // Show the video by removing the 'hidden' attribute
+            videoPlayer.style.display = 'block';
+
+            // Play the video
+            videoPlayer.play();
+
+            // Show the close button
+            playButton.style.display='none'
+            closeButton.style.display = 'block';
+        });
+
+        closeButton.addEventListener('click', () => {
+            // Exit fullscreen
+            document.exitFullscreen();
+
+            // Hide the video
+            videoPlayer.style.display = 'none';
+playButton.style.display='block';
+            // Pause the video
+            videoPlayer.pause();
+
+            // Hide the close button
+            closeButton.style.display = 'none';
+        });
 </script>
 
   
