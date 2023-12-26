@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pixelade" rel="stylesheet">
 
     <style>
+        
     .hiddeen {
     display: none !important;}
      /* Updated styles for the buttons */
@@ -77,6 +78,20 @@
             padding: 20px;
             border-radius: 8px;
         }
+        #loading-screen__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    z-index: 1001;
+    opacity: 1;
+}
     @font-face {
   font-family: 'Mergic';
   src: url('fonts/Mergic.ttf.eot');
@@ -95,6 +110,69 @@
 } 
 #closeButton{
     position: absolute ; bottom: 70%; left: 93%; width: 60px;
+}
+#loading-screen__enter-bar, #loading-screen__enter-button {
+    animation-name: workimn;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+#loading-screen__enter-bar {
+    top: calc(50% + 10vh);
+    height: 0.2vh;
+    width: 90vh;
+    background-image: linear-gradient(90deg,transparent,#69e3f2,transparent);
+    -webkit-animation-name: barOpenHorizontal;
+    animation-name: barOpenHorizontal;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+#loading-screen__enter-button>p {
+    color: #fff;
+    font-size: 3vh;
+}
+#loading-screen__enter-button {
+    top: calc(50% + 16vh);
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    opacity: 1;
+    -webkit-animation-name: slideButtonDown;
+    animation-name: slideButtonDown;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 2s;
+    animation-duration: 1814.758878518607ms;
+    cursor: pointer;
+    white-space: nowrap;
+}
+@keyframes slideButtonDown{
+    0% {
+    opacity: 0;
+    top: calc(50% + 12vh);
+}
+
+100% {
+    opacity: 1;
+    top: calc(50% + 16vh);
+}
+
+
+}@keyframes barOpenHorizontal{
+    0% {
+    width: 0;
+}
+100% {
+    width: 90vh;
+}
 }
 @media  (max-width: 768px) {
    
@@ -148,7 +226,11 @@
 </head>
 
 <body class="bg-[#381e6e] text-white font-NovaFlat-Regular" style="background-image: url('images/b1.jpg'); background-size: cover; background-position: center;">
-
+<div id="loading-screen__container">
+    <img id="loading-screen__logo" src="./images/fav/favicon-32x32.png"/>
+ 
+    <div id="loading-screen__enter-bar"></div>   <div id="loading-screen__enter-button" onclick=" playVideoAndShowPage()"><p>ENTER</p></div>
+    </div>
     <!--Navbar Start-->
     <header class=" mx-auto md:h-[100vh] relative">
 
@@ -482,6 +564,33 @@ playButton.style.display='block';
                 return null;
         }
     }
+    
+        // Function to play the video and show the page after an interval
+        function playVideoAndShowPage() {
+            // Assuming you have a video element with the id 'videoPlayer'
+            const videoPlayer = document.getElementById('videoPlayer');
+
+            if (videoPlayer) {
+                // Play the video
+                // videoPlayer.style.display = 'block';
+                // videoPlayer.play();
+
+                // // Wait for 5 seconds (5000 milliseconds)
+              
+                //     // Stop the video (you may want to pause or hide it)
+                //     videoPlayer.pause();
+
+                    // Display the webpage content
+                    const loadingScreen = document.getElementById('loading-screen__container');
+                    if (loadingScreen) {
+                        loadingScreen.style.display = 'none';
+                    }
+
+                    // You can show/hide elements, load more content, etc.
+                    // Example: document.getElementById('home').style.display = 'block';
+              
+            }
+        }
 </script>
 
   
