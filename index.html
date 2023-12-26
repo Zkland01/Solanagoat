@@ -18,10 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Pixelade" rel="stylesheet">
 
     <style>
+
+        
         
     .hiddeen {
     display: none !important;}
      /* Updated styles for the buttons */
+     /* styles.css */
      .voyage-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -35,12 +38,26 @@
             padding: 10px 20px;
             margin: 8px;
             border: none;
-            border-radius: 2xl;
+            
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
+            width: 45%;
+            box-sizing: border-box;
+            
+        }
+
+        .voyage-button:hover {
+            background-color: #5901b1;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* Two buttons per row on screens larger than 600px */
+            .voyage-button {
+                width: 70%;
+            }
         }
 
         .voyage-button:hover {
@@ -48,21 +65,24 @@
         }
          /* Style for the modal */
          .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            color: black;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
+    background-image: url('images/ne.png'); /* background-image property */
+    background-size: cover;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: black;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
 
         /* Style for the close button in the modal */
         .close-btn {
@@ -221,16 +241,50 @@
 
     
  <link rel="icon" href="images/fav/favicon.ico" type="image/x-icon">
-    <title>Solana Goats</title>
+    <title></title>
   
 </head>
 
-<body class="bg-[#381e6e] text-white font-NovaFlat-Regular" style="background-image: url('images/b1.jpg'); background-size: cover; background-position: center;">
-<div id="loading-screen__container">
-    <img id="loading-screen__logo" src="./images/fav/favicon-32x32.png"/>
- 
-    <div id="loading-screen__enter-bar"></div>   <div id="loading-screen__enter-button" onclick=" playVideoAndShowPage()"><p>ENTER</p></div>
+<body class="text-white font-NovaFlat-Regular" style="
+background: linear-gradient(82deg, #0dc5a5, #f87909, #575851, #0dc5a5, #7f0dc5); 
+background-size: 1000% 1000%; 
+animation: AnimationName 10s ease infinite;">
+
+<style>
+    @keyframes AnimationName {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+</style>
+<div id="loading-spinner" class="hidden">
+  <!-- Your loading spinner or animation goes here -->
+  Loading...
+</div>
+
+    <div id="loading-screen__container" >
+        <img id="loading-screen__logo" src="./images/goat.png" style="height: 30%; width: 24%; animation: bounce 2s infinite; margin-bottom: 55px;"/>
+   
+        <audio id="loading-screen__music" autoplay >
+            <source src="./FreeSuspenseMusic•Uppbeat.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>     <div id="loading-screen__enter-bar"></div>
+        <div id="loading-screen__enter-button" onclick="playVideoAndShowPage()"><p>Lets go on a Voyage</p></div>
     </div>
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    
     <!--Navbar Start-->
     <header class=" mx-auto md:h-[100vh] relative">
 
@@ -316,7 +370,7 @@
                 <div class=" p-[1em] md:p-[0] mt-[150px] md:mt-0 text-center md:text-start md:w-[50%]">
 
                    
-                    <h1 class=" animate-bounce text-[30px] xl:text-[100px] text-yellow-200 mb-[40px] font-DISCOVERY text-gradient">Luffy De Monkey</h1>
+                    <h1 class=" animate-bounce text-[30px] xl:text-[100px] text-yellow-200 mb-[40px] font-DISCOVERY text-gradient"></h1>
                   
 
                     <div class="text-[20px] xl:text-[30px]" id="content-container">
@@ -365,7 +419,7 @@
 <section class="bg-[#381e6e] mb-20 mb-40-lg">
     
 <div class="container mx-auto py-24 px-6 md:px-0 text-center">
-  <h1 class="text-5xl font-mergic font-bold leading-tight mb-8 text-gradient">Get Access</h1>
+  <h1 class="text-5xl font-mergic font-bold leading-tight mb-8 text-gradient"></h1>
   <div class="voyage-buttons">
     <button class="voyage-button" id="voyageA" onclick="openModal('Voyage A')">Voyage A</button>
     <button class="voyage-button" id="voyageB" onclick="openModal('Voyage B')">Voyage B</button>
@@ -489,6 +543,7 @@
     const playButton = document.getElementById('playButton');
         const videoPlayer = document.getElementById('videoPlayer');
         const closeButton = document.getElementById('closeButton');
+        const loadingScreenMusic = document.getElementById('loading-screen__music');
 
         playButton.addEventListener('click', () => {
             // Request fullscreen
@@ -499,7 +554,7 @@
 
             // Play the video
             videoPlayer.play();
-
+            loadingScreenMusic.pause();
             // Show the close button
             playButton.style.display='none'
             closeButton.style.display = 'block';
@@ -568,6 +623,9 @@ playButton.style.display='block';
         // Function to play the video and show the page after an interval
         function playVideoAndShowPage() {
             // Assuming you have a video element with the id 'videoPlayer'
+                    // Assuming you have a video element with the id 'videoPlayer'
+                    const loadingScreenMusic = document.getElementById('loading-screen__music');
+        loadingScreenMusic.play();
             const videoPlayer = document.getElementById('videoPlayer');
 
             if (videoPlayer) {
